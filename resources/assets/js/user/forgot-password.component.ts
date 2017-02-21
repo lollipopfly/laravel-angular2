@@ -32,6 +32,7 @@ export class ForgotPasswordComponent implements OnInit {
         })
         .catch(error => {
           this.error = error.json().error;
+
           console.log(this.error)
         });
   }

@@ -2,8 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { Http } from '@angular/http';
 import { Router } from '@angular/router';
 
-import { Auth } from '../api/user.service';
 import { AuthHttp } from 'angular2-jwt';
+
+import { Auth } from '../api/user.service';
 
 import 'rxjs/add/operator/toPromise';
 
@@ -37,7 +38,7 @@ export class SignInComponent implements OnInit {
 
     let credentials: Icredendials = {
       email: this.email,
-      password: this.password
+      password: this.password,
     }
 
     // Get token
@@ -60,7 +61,7 @@ export class SignInComponent implements OnInit {
                 localStorage.setItem('user', this.userString);
 
                 // Save to global scope
-                this.auth.initCurrentUser(data.user)
+                this.auth.initCurrentUser(data.user);
 
                 this.router.navigate(['users/']);
               },
@@ -69,6 +70,7 @@ export class SignInComponent implements OnInit {
         })
         .catch(error => {
           this.error = error.json();
+
           console.log(this.error)
         });
   }

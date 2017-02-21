@@ -2,8 +2,7 @@
   <h1 class="title">Users</h1>
   <div class="well">
     <h3>Users by {{ sharedService.currentUser.name }}</h3>
-    <button class="btn btn-primary" (click)="getUsers()" style="margin-bottom: 10px">Get Users!</button>
-    <button class="btn btn-danger" type="button" (click)="logOut()">Logout</button>
+    <button class="btn btn-primary" (click)="getUsers()">Get Users!</button>
 
     <ul class="list-group" *ngIf="users">
       <li class="list-group-item" *ngFor="let user of users">

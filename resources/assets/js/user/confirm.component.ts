@@ -17,8 +17,8 @@ export class ConfirmComponent implements OnInit {
   constructor(
     private auth: Auth,
     private activatedRoute: ActivatedRoute,
-    private router: Router,
     private http: Http,
+    private router: Router
   ) {}
 
   ngOnInit() {
@@ -47,6 +47,7 @@ export class ConfirmComponent implements OnInit {
           })
           .catch(error => {
             console.log(error)
+
             this.router.navigate(['/user/sign_in']);
           });
     });

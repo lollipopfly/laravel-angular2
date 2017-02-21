@@ -29,7 +29,7 @@ export class ResetPasswordComponent implements OnInit {
       }
 
       if (this.password != this.confirmPassword) {
-        this.error = 'Password is invalid! Password doesn\'t match confirmation'
+        this.error = 'Password is invalid! Password doesn\'t match confirmation';
 
         return false;
       }
@@ -44,6 +44,7 @@ export class ResetPasswordComponent implements OnInit {
           })
           .catch(error => {
             console.log(error)
+
             this.error = error.json().error;
           });
     });

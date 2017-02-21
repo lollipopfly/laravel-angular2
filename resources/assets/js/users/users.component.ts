@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Auth } from '../api/user.service';
 import { UsersService } from '../api/users.service';
 import { SharedService } from '../api/shared.service';
 
@@ -14,7 +13,6 @@ export class UsersComponent implements OnInit {
   error: string;
 
   constructor(
-    private auth: Auth,
     private usersService: UsersService,
     private sharedService: SharedService
   ) {}
@@ -27,9 +25,5 @@ export class UsersComponent implements OnInit {
     }).catch(function(error) {
       console.log(error);
     });
-  }
-
-  logOut() {
-    this.auth.logOut();
   }
 }

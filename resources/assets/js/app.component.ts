@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { tokenNotExpired } from 'angular2-jwt';
 import { Router, ActivatedRoute } from '@angular/router';
+
+import { tokenNotExpired } from 'angular2-jwt';
 
 import { Auth } from './api/user.service';
 import { SharedService } from './api/shared.service';
@@ -11,13 +12,6 @@ import { SharedService } from './api/shared.service';
 })
 
 export class AppComponent implements OnInit {
-  publicRoutes = [
-    'user/sign_up',
-    'user/confirm',
-    'user/forgot_password',
-    'user/reset_password',
-  ]
-
   constructor(
     public auth: Auth,
     private route: ActivatedRoute,
@@ -26,11 +20,10 @@ export class AppComponent implements OnInit {
   ) {
     // On state chagne (every route chagne)
     router.events.subscribe(event => {
-      // console.log(this.route);
       let user = JSON.parse(localStorage.getItem('user'))
 
+      // Save to global scope
       if(user && auth.loggedIn()) {
-        // Save to global scope
         auth.initCurrentUser(user);
       }
     });

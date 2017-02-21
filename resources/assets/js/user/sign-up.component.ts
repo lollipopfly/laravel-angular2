@@ -40,6 +40,7 @@ export class SignUpComponent implements OnInit {
         })
         .catch(error => {
           this.error = error.json();
+
           console.log(this.error)
         });
   }

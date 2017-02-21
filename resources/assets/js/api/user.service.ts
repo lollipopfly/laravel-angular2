@@ -1,9 +1,10 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 
+import { tokenNotExpired } from 'angular2-jwt';
+
 import { SharedService } from '../api/shared.service';
 
-import { tokenNotExpired } from 'angular2-jwt';
 
 @Injectable()
 export class Credentials {

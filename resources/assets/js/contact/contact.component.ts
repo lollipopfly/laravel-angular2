@@ -4,12 +4,11 @@ import { Component, OnInit } from '@angular/core';
   selector: 'my-contact',
   templateUrl: `public/views/pages/contact.html`,
 })
-export class ContactComponent implements OnInit{
+
+export class ContactComponent implements OnInit {
   name = 'Angular';
 
   constructor() {}
 
-  ngOnInit() {
-
-  }
+  ngOnInit() {}
 }
