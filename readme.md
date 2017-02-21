@@ -1,40 +1,62 @@
-<p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
+#Laravel & Angular2 boilerplate.#
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+##Getting Started##
+Clone Repo
 
-## About Laravel
+````
+git clone https://github.com/lollipopfly/laravel-angular2.git
+````
+Create Database
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
+Cd project and run composer install and npm install
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+````
+cd laravel-angular2
+composer install
+npm install
+````
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb combination of simplicity, elegance, and innovation give you tools you need to build any application with which you are tasked.
+Add .env file to root directory.
 
-## Learning Laravel
+Migrate tables
 
-Laravel has the most extensive and thorough documentation and video tutorial library of any modern web application framework. The [Laravel documentation](https://laravel.com/docs) is thorough, complete, and makes it a breeze to get started learning the framework.
+````
+php artisan migrate
+````
 
-If you're not in the mood to read, [Laracasts](https://laracasts.com) contains over 900 video tutorials on a range of topics including Laravel, modern PHP, unit testing, JavaScript, and more. Boost the skill level of yourself and your entire team by digging into our comprehensive video library.
+### Gulp ###
+````
+gulp
+````
 
-## Contributing
+### Angular 2 ###
+you can find angular files in
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+````
+resources/assets/js
+````
 
-## Security Vulnerabilities
+output files
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+````
+public/js
+````
 
-## License
+### SCSS ###
+Css is written in scss and postcss.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+Sass files
+````
+resources/assets/sass
+````
+
+output files
+
+````
+public/css
+````
+
+### Contributing ###
+contributions are more than welcome!
+
+
